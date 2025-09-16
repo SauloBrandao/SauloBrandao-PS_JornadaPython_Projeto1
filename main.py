@@ -1,5 +1,6 @@
 import pyautogui
-import time # -> biblioteca do proprio Python responsavel por fazer controle de tempo entre os codigos
+import time # -> biblioteca do proprio Python responsavel por fazer controle de tempo
+import pandas
 
 pyautogui.PAUSE = 0.5 # -> definindo Delay entre os comandos
 
@@ -24,3 +25,10 @@ pyautogui.write("123") # -> digitando senha
 
 pyautogui.press("tab") 
 pyautogui.press("enter")
+
+time.sleep(3)
+
+tabela = pandas.read_csv("produtos.csv") # -> usando o pandas pra ler o CSV e armazenar as informações dentro da variavel Tabela
+
+pyautogui.click(x=753, y=280)
+
