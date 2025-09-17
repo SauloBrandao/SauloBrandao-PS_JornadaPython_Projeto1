@@ -62,8 +62,10 @@ for linha in tabela.index: # -> Loop pra prencher o formulario de produtos
     pyautogui.write(str(custo))
 
     pyautogui.press("tab")
-    obs = tabela.loc[linha, "obs"]
-    pyautogui.write(str(obs))
+    obs = str(tabela.loc[linha, "obs"])
+
+    if obs != "nan":
+        pyautogui.write(obs)
 
     pyautogui.press("tab")
     pyautogui.press("enter")
